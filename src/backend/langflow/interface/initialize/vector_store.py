@@ -31,7 +31,7 @@ def initialize_mongodb(class_object: Type[MongoDBAtlasVectorSearch], params: dic
     import certifi
 
     client: MongoClient = MongoClient(
-        MONGODB_ATLAS_CLUSTER_URI, tlsCAFile=certifi.where()
+        MONGODB_ATLAS_CLUSTER_URI
     )
     db_name = params.pop("db_name", None)
     collection_name = params.pop("collection_name", None)
